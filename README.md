@@ -1,14 +1,16 @@
 # Vehicle Accident Alert System
 
-**Academic / embedded automotive-safety project · Arduino Uno · Vibration detection · MQ-3 sensing · GPS · Email alerts**
+**Academic embedded-systems project · Arduino Uno · Vibration detection · MQ-3 sensing · GPS · Email alerts**
 
-> **Author's project.** This vehicle safety system was designed and developed by **Vivekanand Naik** ([@vivekanandnaikk](https://github.com/vivekanandnaikk)).
+**Repository status — documentation foundation.** This repository currently contains project documentation and a portfolio archive. The verified firmware, Python application, dependency manifest, and reproducible test artifacts have not yet been added, so the project described here is not currently runnable from this repository.
+
+This project describes an embedded vehicle-safety prototype that reads vibration, alcohol-sensor, and GPS data using an Arduino Uno, then sends telemetry to a Python host application for event processing and optional emergency email notifications. It is an educational prototype, not a certified accident-detection or emergency-response system.
 
 ## Overview
 
-The Vehicle Accident Alert System is an embedded prototype that monitors vibration, alcohol-sensor input, and GPS location, then supports automated emergency email notifications through a host computer. The system combines Arduino sensor acquisition with Python host-side event processing and email delivery.
+The Vehicle Accident Alert System is an embedded prototype that monitors vibration, alcohol-sensor input, and GPS location, then supports automated emergency email notifications through a host computer.
 
-The Arduino Uno acquires and streams sensor telemetry over USB serial. A connected Python application processes the data, detects configured events, and can send notifications through Gmail SMTP. Email delivery requires the host computer and an internet connection.
+The Arduino Uno acquires and streams sensor telemetry over USB serial. A connected Python application processes the data, detects configured events, and can send notifications through Gmail SMTP.
 
 This is an educational safety prototype, not a certified accident-detection or emergency-response system.
 
@@ -101,6 +103,7 @@ The coordinates above are illustrative. The exact firmware and protocol artifact
 ├── Vehicle-Accident-Alert-System-Portfolio.zip
 └── docs/
     ├── IMPLEMENTATION_STATUS.md
+    ├── PROJECT_OVERVIEW.md
     └── PROJECT_PLAN.md
 ```
 
@@ -108,7 +111,7 @@ The portfolio archive documents the author's original project work. It should be
 
 ## Setup and execution
 
-Verified project source, dependencies, firmware, and run instructions will be documented here as they are added to the repository. Until then, this README describes the author's project scope rather than claiming a currently reproducible software build.
+Verified project source, dependencies, firmware, and run instructions will be documented here as they are added to the repository. Until then, this README describes the author's project scope rather than a currently runnable implementation.
 
 Recommended safe setup:
 
