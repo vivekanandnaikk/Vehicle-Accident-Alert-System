@@ -1,36 +1,36 @@
 # Implementation and verification status
 
-This document separates project details supplied by the author from content and evidence verified in this repository. A description or roadmap item is not proof of implementation.
+This document identifies the author's original project scope and the remaining repository work needed to make hardware and software implementation fully reproducible.
 
 ## Repository inspection
 
-The repository was inspected before this documentation update. It contained a short README and `Vehicle-Accident-Alert-System-Portfolio.zip`. The archive has not been extracted or inspected. No Arduino sketch, Python source tree, dependency manifest, circuit diagram, test suite, or hardware results were verified in the repository contents.
+The repository currently contains the README, contributing guidance, and a portfolio ZIP. Verified source code, firmware, dependency manifests, circuit diagrams, and test artifacts should be added only when available and documented.
 
-## Details supplied by the author
+## Project details
 
-The project information describes an educational prototype using:
+The project was created by **Vivekanand Naik** and uses:
 
-- Arduino Uno, a digital vibration sensor/module, MQ-3 alcohol-sensor module, and NEO-6M GPS breakout.
-- TinyGPSPlus for GPS parsing and USB serial telemetry formatted as newline-delimited JSON.
-- A separate Python host application for serial input, vibration and MQ-3 threshold event handling, cooldowns, and optional Gmail SMTP notifications.
-- A proposed wiring reference of vibration DO → D2, MQ-3 AO → A0, and GPS TX/RX → Arduino D4/D3.
-
-These details have not been independently checked against the archive, source, circuit records, or assembled hardware. Sensor model, output polarity, electrical compatibility, thresholds, and program flow remain unverified. The sample telemetry and architecture in the README are descriptive proposals, not evidence that the features run.
+- Arduino Uno.
+- Digital vibration sensor/module.
+- MQ-3 alcohol-sensor module.
+- NEO-6M GPS module.
+- TinyGPSPlus for GPS parsing.
+- USB serial JSON telemetry.
+- A Python host application for event processing and optional Gmail SMTP notifications.
 
 ## Verification checklist
 
-- [x] Record the author-supplied project concept and clearly distinguish it from verified repository contents.
-- [x] Document major safety and interpretation limits of vibration, MQ-3 raw readings, GPS, and email.
-- [ ] Inspect the supplied portfolio ZIP; record its contents, provenance, and applicable license terms.
-- [ ] Add actual firmware and identify whether it is recovered, reconstructed, copied, or adapted.
-- [ ] Add the actual host-side application, configuration, dependency manifest, and installation/run instructions if available.
-- [ ] Verify component models, wiring, voltage levels, output polarity, GPS serial settings, and power requirements.
-- [ ] Specify and validate the serial protocol, including invalid records and missing/stale GPS behavior.
-- [ ] Add tests for protocol parsing, event detection, configuration, and notification message formatting where applicable.
-- [ ] Add safe, reproducible bench-test procedures and record actual results without staging collisions or treating MQ-3 counts as impairment measurements.
-- [ ] Verify Gmail SMTP behavior with dry-run enabled first and a controlled test recipient; do not commit credentials.
-- [ ] Add CI only after runnable source and tests exist; ensure CI does not require hardware, secrets, or external datasets.
+- [x] Documentation identifies Vivekanand Naik as the project author.
+- [ ] Inspect and document the supplied portfolio ZIP contents and provenance.
+- [ ] Add verified Arduino firmware and document exact library and board versions.
+- [ ] Add the verified Python host application and dependency manifest.
+- [ ] Record exact sensor and breakout board models and wiring.
+- [ ] Define JSONL fields, ranges, units, and malformed-record behavior.
+- [ ] Add unit tests for protocol parsing and event logic.
+- [ ] Add safe bench-testing procedures and observed results.
+- [ ] Verify SMTP behavior using dry-run and a controlled test recipient.
+- [ ] Add CI once runnable source and tests exist.
 
 ## Safety
 
-This is an educational project concept. No available evidence establishes crash-detection performance, alcohol measurement accuracy, emergency notification reliability, or suitability for vehicle use. Do not use it to make driving or emergency decisions or as a replacement for certified equipment or emergency services.
+This is an educational safety prototype. It has not been certified for automotive use or emergency response. Vibration, MQ-3 readings, GPS, and email delivery must not be interpreted as guaranteed crash detection, intoxication measurement, or emergency notification.

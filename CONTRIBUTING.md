@@ -4,19 +4,22 @@ Issues and pull requests are welcome. Please keep contributions focused, documen
 
 ## Before contributing
 
-- Check the README and `docs/` for the distinction between author-supplied project scope and repository-verified implementation.
-- Do not describe planned behavior, remembered hardware details, or portfolio material as implemented or tested without repository evidence.
-- Verify module pinouts, electrical limits, and relevant library or service terms before documenting build instructions.
-- Do not commit credentials, private data, large generated artifacts, or assets unless their distribution is authorized.
+- Read the README and `docs/` to understand the project scope and implementation status.
+- Do not commit private or restricted hardware records, credentials, or large generated assets without permission.
+- Verify module pinouts, electrical limits, firmware behavior, and any third-party library terms before changing build instructions.
 
 ## Pull requests
 
-- Explain the problem and proposed change.
-- Include relevant validation steps and results; do not imply tests, hardware checks, or experiments were run if they were not.
+- Explain the problem and the proposed change.
+- Include relevant validation steps and results.
+- Do not imply that hardware tests or experiments were run unless the evidence is available.
 - Update documentation when changing wiring, protocol, thresholds, dependencies, behavior, or project status.
-- Support reliability or performance claims with reproducible methods and evidence.
-- Keep safety and prototype limitations clear; this project must not be presented as a certified automotive system.
+- Support performance or reliability claims with reproducible hardware and software details.
 
-## Implementation and assets
+## Reports and results
 
-The original source and circuit records have not yet been verified. When adding recovered or reconstructed material, explain its provenance and distinguish it from newly written reference code. Review licenses and permissions before redistributing source, libraries, diagrams, photos, or archive contents.
+Clearly distinguish implemented behavior from planned work. Attribute external libraries and components and document applicable license or usage terms. This project must not be described as certified automotive or emergency-response equipment.
+
+## Author
+
+This project was created by **Vivekanand Naik** ([vivekanandnaikk](https://github.com/vivekanandnaikk)).
